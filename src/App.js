@@ -1,24 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import './styles/css/styles.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <>
+      <header className='fontStyled text-primary fs-1 text-center'>
+        SplitEZ
       </header>
-    </div>
+      <nav className='fontStyled text-primary fs-1 text-center'>Nav</nav>
+      <main className='fontStyled text-primary fs-1 text-center'>
+        Main Content
+      </main>
+      <footer className='fontStyled text-primary fs-1 text-center'>
+        Footer
+      </footer>
+    </>
   );
 }
 

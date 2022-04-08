@@ -1,0 +1,94 @@
+// =============================================
+// General styling:
+// =============================================
+body {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p {
+    margin: 0 !important;
+  }
+}
+
+// =============================================
+// Util classes:
+// =============================================
+.fontStyled {
+  font-family: $font-styled;
+}
+.textColor {
+  color: var(--bs-gray-800);
+}
+.text-gray-400 {
+  color: var(--bs-gray-400);
+}
+.sectionHeading {
+  color: var(--bs-primary);
+  font-family: $font-styled;
+  font-size: $h5-font-size;
+}
+.alignAll {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.ls-1 {
+  letter-spacing: 1px;
+}
+.ls-2 {
+  letter-spacing: 2px;
+}
+.bg-gray-500 {
+  background-color: var(--bs-gray-500);
+}
+.bg-gray-600 {
+  background-color: var(--bs-gray-600);
+}
+.bg-gray-700 {
+  background-color: var(--bs-gray-700);
+}
+
+// @include xxs {
+// }
+// @include xs {
+// }
+// @include sm {
+// }
+// @include md {
+// }
+// @include lg {
+// }
+// @include xl {
+// }
+// @include xxl {
+// }
+
+// =============================================
+// React NavLink style:
+// =============================================
+.nav-item {
+  a {
+    color: var(--bs-gray-400);
+    &:hover {
+      color: var(--bs-gray-300);
+    }
+  }
+  .active {
+    color: var(--bs-gray-200);
+  }
+}
+
+.icon-item {
+  a {
+    color: var(--bs-gray-400);
+    &:hover {
+      color: var(--bs-gray-300);
+    }
+  }
+  .active {
+    color: var(--bs-gray-200);
+  }
+}
