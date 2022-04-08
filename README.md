@@ -25,8 +25,6 @@
 - Bootstrap: `npm i bootstrap`
 - React Bootstrap: `npm i react-bootstrap`
 - React icons: `npm i react-icons`
-- Burger-menu: `npm i react-burger-menu`
-- Responsive picture: `npm i react-responsive-image`
 
 ## Setup to run all together:
 
