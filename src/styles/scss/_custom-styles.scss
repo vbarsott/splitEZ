@@ -70,25 +70,32 @@ body {
 // React NavLink style:
 // =============================================
 .nav-item {
+  min-width: 90px;
+  text-align: center;
   a {
-    color: var(--bs-gray-400);
+    color: var(--bs-light);
     &:hover {
-      color: var(--bs-gray-300);
+      color: var(--bs-secondary);
     }
   }
   .active {
-    color: var(--bs-gray-200);
+    color: var(--bs-gray-300);
   }
 }
 
 .icon-item {
   a {
-    color: var(--bs-gray-400);
+    color: var(--bs-primary);
     &:hover {
-      color: var(--bs-gray-300);
+      color: var(--bs-secondary);
     }
   }
   .active {
-    color: var(--bs-gray-200);
+    color: var(--bs-secondary);
   }
+}
+
+.rotateText {
+  transform: rotate(-25deg);
+  margin-top: 20px !important;
 }
