@@ -1,5 +1,21 @@
 # Guide Notes
 
+## Description
+
+This application is being developed to help splitting common expenses of groups of friends on events and calculate each participant's share.
+
+### Sprint #01
+
+- This first sprint includes the initial setup, structure of compontents, and design.
+- The goal for this sprint is to be able to include groups, expenses, and get each individual share.
+- Next sprint (sprint #2) goals:
+  - Fix sprint #1 bugs
+  - Add participants names (for each group)
+  - Update groups and expenses informations (edit button)
+  - Delete groups or expenses (delete button)
+  - Develop local storage system
+  - Drag and Drop participants and groups names
+
 ## Quick start
 
 - Run: `npx create-react-app splitez`
