@@ -2,7 +2,7 @@
 
 ## Link to the project
 
-https://react-dev.vanessabarsotti.com/
+https://splitez.vanessabarsotti.com/
 
 ## Description
 
