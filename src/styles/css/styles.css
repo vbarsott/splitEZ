@@ -57,6 +57,11 @@ body p {
   margin: 0 !important;
 }
 
+.appWrapper {
+  max-width: 320px;
+  margin: 0 auto;
+}
+
 .fontStyled {
   font-family: "Rampart One", cursive;
 }
@@ -69,26 +74,6 @@ body p {
   color: var(--bs-gray-400);
 }
 
-.sectionHeading {
-  color: var(--bs-primary);
-  font-family: "Rampart One", cursive;
-  font-size: 1.25rem;
-}
-
-.alignAll {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.ls-1 {
-  letter-spacing: 1px;
-}
-
-.ls-2 {
-  letter-spacing: 2px;
-}
-
 .bg-gray-500 {
   background-color: var(--bs-gray-500);
 }
@@ -99,6 +84,26 @@ body p {
 
 .bg-gray-700 {
   background-color: var(--bs-gray-700);
+}
+
+.ls-1 {
+  letter-spacing: 1px;
+}
+
+.ls-2 {
+  letter-spacing: 2px;
+}
+
+.sectionHeading {
+  color: var(--bs-primary);
+  font-family: "Rampart One", cursive;
+  font-size: 1.25rem;
+}
+
+.alignAll {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .nav-item {

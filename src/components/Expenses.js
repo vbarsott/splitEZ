@@ -15,7 +15,7 @@ const Expenses = ({ groups, expenses, setExpenses }) => {
     <>
       <div className='min-vh-50 py-4'>
         <div className='container'>
-          <h2 className='fs-5 text-primary mb-2'>Pre paid expenses</h2>
+          <h2 className='fs-5 text-primary mb-2'>Step 2: Add the expenses</h2>
 
           <form>
             <div className='container'>
@@ -66,7 +66,7 @@ const Expenses = ({ groups, expenses, setExpenses }) => {
 
                 <div className='col-12 addBtn text-center mt-2'>
                   <button
-                    className='btn btn-primary link-light min-vw-40'
+                    className='btn btn-primary link-light'
                     onClick={handleAddExpense}>
                     Add expense
                   </button>
@@ -77,7 +77,6 @@ const Expenses = ({ groups, expenses, setExpenses }) => {
 
           <div className='container'>
             <div className='row align-items-center border border-primary rounded-3 mb-2 py-2'>
-              {console.log(expenses)}
               {expenses.map((exp) => (
                 <div key={exp.what}>
                   {exp.who}: {exp.what} (CA$ {exp.amount})

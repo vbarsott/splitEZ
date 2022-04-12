@@ -25,7 +25,7 @@ const Result = ({ groups, expenses }) => {
   return (
     <>
       <div className='container py-4'>
-        <h2 className='fs-5 text-primary mb-2'>Result</h2>
+        <h2 className='fs-5 text-primary mb-2'>Step 3: Check the result</h2>
 
         <div className='row mb-2'>
           <div className='col-12'>

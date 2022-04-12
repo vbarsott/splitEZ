@@ -1,5 +1,9 @@
 # Guide Notes
 
+## Link to the project
+
+https://react-dev.vanessabarsotti.com/
+
 ## Description
 
 This application is being developed to help splitting common expenses of groups of friends on events and calculate each participant's share.
@@ -42,9 +46,25 @@ This application is being developed to help splitting common expenses of groups 
 - React Bootstrap: `npm i react-bootstrap`
 - React icons: `npm i react-icons`
 
+## Mock api to simulate backend:
+
+- Install: `npm i json-server`
+
+## Setup Axios:
+
+- Create directory data outside src folder:
+- Include db.json inside this data folder
+- Install: `npm i axios`;
+- Create directory api inside src folder:
+- Create a file inside api folder to setup the endpoint (Ex: groups.js)
+- Launch json-server: `npx json-server -p 5000 -w data/db.json`
+- Open new terminal and run npm start
+- Import to the file being used: `import api from '../api/books';`
+- Define useEffect hook
+
 ## Setup to run all together:
 
 - Install: `npm i concurrently --save-dev`
 - Include script on package.json (DON'T DELETE WHAT WAS INSTALLED BEFORE):
-  `"scripts": { "dev": "concurrently --kill-others \"npm start\" \"npm run sass\"" }`
+  `"scripts": { "dev": "concurrently --kill-others \"npm start\" \"npm run sass\" \"npm run server\"" }`
 - Run dev: `npm run dev`

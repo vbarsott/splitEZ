@@ -14,7 +14,7 @@ const Groups = ({ groups, setGroups }) => {
     <>
       <div className='min-vh-50 py-4'>
         <div className='container'>
-          <h2 className='fs-5 text-primary mb-2'>Groups</h2>
+          <h2 className='fs-5 text-primary mb-2'>Step 1: Create a group</h2>
 
           <form>
             <div className='container'>
@@ -47,7 +47,7 @@ const Groups = ({ groups, setGroups }) => {
 
                 <div className='col-12 addBtn text-center mt-2'>
                   <button
-                    className='btn btn-primary link-light min-vw-40'
+                    className='btn btn-primary link-light '
                     onClick={handleAddGroup}>
                     Add group
                   </button>
@@ -58,7 +58,7 @@ const Groups = ({ groups, setGroups }) => {
 
           <div className='container'>
             <div className='row align-items-center border border-primary rounded-3 mb-2 py-2'>
-              {console.log(groups)}
+              <h2 className='fs-5 text-primary mb-2'>Groups</h2>
               {groups.map((g) => (
                 <div key={g.name}>
                   {g.name} ({g.qty} people)

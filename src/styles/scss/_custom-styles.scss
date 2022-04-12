@@ -1,5 +1,5 @@
 // =============================================
-// General styling:
+// General styling
 // =============================================
 body {
   h1,
@@ -14,32 +14,26 @@ body {
 }
 
 // =============================================
-// Util classes:
+// Custom classes
 // =============================================
+
+// Application wrapper size
+.appWrapper {
+  max-width: 320px;
+  margin: 0 auto;
+}
+
+// Fonts
 .fontStyled {
   font-family: $font-styled;
 }
+
+// Colors
 .textColor {
   color: var(--bs-gray-800);
 }
 .text-gray-400 {
   color: var(--bs-gray-400);
-}
-.sectionHeading {
-  color: var(--bs-primary);
-  font-family: $font-styled;
-  font-size: $h5-font-size;
-}
-.alignAll {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.ls-1 {
-  letter-spacing: 1px;
-}
-.ls-2 {
-  letter-spacing: 2px;
 }
 .bg-gray-500 {
   background-color: var(--bs-gray-500);
@@ -51,24 +45,32 @@ body {
   background-color: var(--bs-gray-700);
 }
 
-// @include xxs {
-// }
-// @include xs {
-// }
-// @include sm {
-// }
-// @include md {
-// }
-// @include lg {
-// }
-// @include xl {
-// }
-// @include xxl {
-// }
+// Spacing
+.ls-1 {
+  letter-spacing: 1px;
+}
+.ls-2 {
+  letter-spacing: 2px;
+}
+
+// Headings
+.sectionHeading {
+  color: var(--bs-primary);
+  font-family: $font-styled;
+  font-size: $h5-font-size;
+}
+
+// Alignment
+.alignAll {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 // =============================================
-// React NavLink style:
+// Links
 // =============================================
+// React NavLink style
 .nav-item {
   min-width: 90px;
   text-align: center;
@@ -82,7 +84,7 @@ body {
     color: var(--bs-gray-300);
   }
 }
-
+// Icon link style
 .icon-item {
   a {
     color: var(--bs-primary);
@@ -95,6 +97,10 @@ body {
   }
 }
 
+// =============================================
+// Brand design
+// =============================================
+// Logo design
 .rotateText {
   transform: rotate(-25deg);
   margin-top: 20px !important;
