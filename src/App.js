@@ -1,8 +1,8 @@
 import './styles/css/styles.css';
-import api from './api/groups';
 
-import React, { useState } from 'react';
+import React from 'react';
 import { Route, Routes } from 'react-router-dom';
+import GroupsContextProvider from './contexts/GroupsContext';
 
 import Expenses from './components/Expenses';
 import Header from './components/Header';
@@ -12,13 +12,7 @@ import MainNav from './components/MainNav';
 import Footer from './components/Footer';
 import Result from './components/Result';
 
-import { useLocalStorage } from './components/useLocalStorage';
-
 function App() {
-  const [groups, setGroups] = useLocalStorage('groups', '');
-
-  const [expenses, setExpenses] = useState([]);
-
   return (
     <>
       <div className='appWrapper'>
@@ -33,27 +27,14 @@ function App() {
             </nav>
 
             <main>
-              <Routes>
-                <Route path='/' element={<Home />} />
-                <Route
-                  path='/groups'
-                  element={<Groups groups={groups} setGroups={setGroups} />}
-                />
-                <Route
-                  path='/expenses'
-                  element={
-                    <Expenses
-                      groups={groups}
-                      expenses={expenses}
-                      setExpenses={setExpenses}
-                    />
-                  }
-                />
-                <Route
-                  path='/result'
-                  element={<Result groups={groups} expenses={expenses} />}
-                />
-              </Routes>
+              <GroupsContextProvider>
+                <Routes>
+                  <Route path='/' element={<Home />} />
+                  <Route path='/groups' element={<Groups />} />
+                  <Route path='/expenses' element={<Expenses />} />
+                  <Route path='/result' element={<Result />} />
+                </Routes>
+              </GroupsContextProvider>
             </main>
 
             <footer>

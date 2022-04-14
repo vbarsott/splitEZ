@@ -1,6 +1,9 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { GroupsContext } from '../contexts/GroupsContext';
 
-const Expenses = ({ groups, expenses, setExpenses }) => {
+const Expenses = () => {
+  const { groups, expenses, setExpenses } = useContext(GroupsContext);
+
   let whoPaid = '';
   let whatWasBought = '';
   let amountPaid = 0;
@@ -77,9 +80,13 @@ const Expenses = ({ groups, expenses, setExpenses }) => {
 
           <div className='container'>
             <div className='row align-items-center border border-primary rounded-3 mb-2 py-2'>
+              <h2 className='fs-5 text-primary mb-2'>Expenses</h2>
+
               {expenses.map((exp) => (
-                <div key={exp.what}>
-                  {exp.who}: {exp.what} (CA$ {exp.amount})
+                <div
+                  key={exp.what}
+                  className='d-flex justify-content-between align-items-center my-2'>
+                  {exp.who}: {exp.what} (CA$ {exp.amount.toFixed(2)})
                 </div>
               ))}
             </div>

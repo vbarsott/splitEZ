@@ -1,6 +1,9 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { GroupsContext } from '../contexts/GroupsContext';
 
-const Result = ({ groups, expenses }) => {
+const Result = () => {
+  const { groups, expenses } = useContext(GroupsContext);
+
   let total = 0;
   let groupsBalances = groups.slice();
   let numberOfPeople = 0;
@@ -24,44 +27,42 @@ const Result = ({ groups, expenses }) => {
 
   return (
     <>
-      <div className='container py-4'>
-        <h2 className='fs-5 text-primary mb-2'>Step 3: Check the result</h2>
+      <div className='min-vh-50 py-4'>
+        <div className='container'>
+          <h2 className='fs-5 text-primary mb-2'>Step 3: Check the result</h2>
 
-        <div className='row mb-2'>
-          <div className='col-12'>
-            <p className='text-secondary'>Total:</p>
-          </div>
-          <div className='col-12'>
-            <div className='border border-primary rounded-3 p-1'>
-              <p>CA$ {total.toFixed(2)}</p>
+          <div className='container'>
+            <div className='row align-items-center border border-primary rounded-3 mb-2 py-2'>
+              <div className='col-6'>
+                <p className='fs-6'>Total:</p>
+              </div>
+              <div className='col-6'>
+                <p className='text-end'>CA$ {total.toFixed(2)}</p>
+              </div>
+            </div>
+
+            <div className='row align-items-center border border-primary rounded-3 mb-2 py-2'>
+              <div className='col-6'>
+                <p className='fs-6'>Value per person:</p>
+              </div>
+              <div className='col-6'>
+                <p className='text-end'>CA$ {valuePerPerson.toFixed(2)}</p>
+              </div>
             </div>
           </div>
-        </div>
 
-        <div className='row mb-2'>
-          <div className='col-12'>
-            <p className='text-secondary'>Value per person:</p>
-          </div>
-          <div className='col-12'>
-            <div className='border border-primary rounded-3 p-1'>
-              <p>CA$ {valuePerPerson.toFixed(2)}</p>
-            </div>
-          </div>
-        </div>
-
-        <div className='row mb-2'>
-          <div className='col-12'>
-            <p className='text-secondary'>Participants:</p>
-          </div>
-          <div className='col-12'>
-            <div className='border border-primary rounded-3 p-1'>
-              {groupsBalances.map((gb) => (
-                <div key={gb.name}>
-                  <p>
-                    {gb.name}: CA$ {gb.balance.toFixed(2)}
-                  </p>
-                </div>
-              ))}
+          <div className='row mb-2'>
+            <div className='col-12'>
+              <div className='border border-primary rounded-3 p-1 min-vh-10'>
+                <h2 className='fs-5 text-primary mb-2'>Result</h2>
+                {groupsBalances.map((gb) => (
+                  <div key={gb.name}>
+                    <p>
+                      {gb.name}: CA$ {gb.balance.toFixed(2)}
+                    </p>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>
