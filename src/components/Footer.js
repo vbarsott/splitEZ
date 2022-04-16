@@ -5,6 +5,7 @@ const Footer = () => {
   const yyyy = {
     year: 'numeric',
   };
+
   return (
     <>
       <div className='bg-primary'>

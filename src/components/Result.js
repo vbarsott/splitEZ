@@ -51,18 +51,26 @@ const Result = () => {
             </div>
           </div>
 
-          <div className='row mb-2'>
-            <div className='col-12'>
-              <div className='border border-primary rounded-3 p-1 min-vh-10'>
-                <h2 className='fs-5 text-primary mb-2'>Result</h2>
-                {groupsBalances.map((gb) => (
-                  <div key={gb.name}>
-                    <p>
-                      {gb.name}: CA$ {gb.balance.toFixed(2)}
-                    </p>
-                  </div>
-                ))}
-              </div>
+          <div className='container'>
+            <div className='row align-items-center border border-primary rounded-3 mb-2 py-2'>
+              <h2 className='fs-5 text-primary mb-2'>Result</h2>
+
+              {groupsBalances.map((gb) => (
+                <div
+                  key={gb.name}
+                  className='d-flex justify-content-between align-items-center my-2'>
+                  <p>
+                    <span className='text-primary'>{gb.name}:</span> CA$
+                    {gb.balance.toFixed(2)}
+                    <span
+                      className={
+                        gb.balance < 0 ? 'text-danger' : 'text-primary'
+                      }>
+                      {gb.balance < 0 ? ' (To pay)' : ' (To receive)'}
+                    </span>
+                  </p>
+                </div>
+              ))}
             </div>
           </div>
         </div>

@@ -16,11 +16,15 @@ This application is being developed to help splitting common expenses of groups 
   - Fix sprint #1 bugs
   - Develop local storage system
   - Delete groups or expenses (delete button)
-  - Update groups and expenses informations (edit button)
-  - Add participants names (for each group)
-  - Drag and Drop participants and groups names
+  - Improve Results display
 
-## Quick start
+## If cloning the project
+
+- git clone https://github.com/vbarsott/splitEZ.git
+- npm install
+- npm run dev
+
+## If creating from scratch
 
 - Run: `npx create-react-app splitez`
 - Clean up extra files
@@ -29,9 +33,11 @@ This application is being developed to help splitting common expenses of groups 
 
 ## Install modules:
 
+### Router
+
 - Router: `npm i react-router-dom`
 
-## Styling:
+### Styling
 
 - Sass: `npm i sass --save-dev`
 - Import inside App.js: `import './styles/css/styles.css';`
@@ -46,7 +52,7 @@ This application is being developed to help splitting common expenses of groups 
 - React Bootstrap: `npm i react-bootstrap`
 - React icons: `npm i react-icons`
 
-## Setup to run all together:
+## Setup to run all together
 
 - Install: `npm i concurrently --save-dev`
 - Include script on package.json (DON'T DELETE WHAT WAS INSTALLED BEFORE):

@@ -16,11 +16,16 @@ body {
 // =============================================
 // Custom classes
 // =============================================
-
 // Application wrapper size
 .appWrapper {
   max-width: 320px;
   margin: 0 auto;
+}
+@include xs {
+  .appWrapper {
+    max-width: 420px;
+    margin: 0 auto;
+  }
 }
 
 // Fonts
@@ -28,36 +33,15 @@ body {
   font-family: $font-styled;
 }
 
-// Colors
-.textColor {
-  color: var(--bs-gray-800);
-}
-.text-gray-400 {
-  color: var(--bs-gray-400);
-}
-.bg-gray-500 {
-  background-color: var(--bs-gray-500);
-}
-.bg-gray-600 {
-  background-color: var(--bs-gray-600);
-}
-.bg-gray-700 {
-  background-color: var(--bs-gray-700);
-}
-
-// Spacing
+// Letter spacing
 .ls-1 {
   letter-spacing: 1px;
 }
 .ls-2 {
   letter-spacing: 2px;
 }
-
-// Headings
-.sectionHeading {
-  color: var(--bs-primary);
-  font-family: $font-styled;
-  font-size: $h5-font-size;
+.ls-3 {
+  letter-spacing: 3px;
 }
 
 // Alignment

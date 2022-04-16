@@ -10,8 +10,40 @@ const Groups = () => {
 
   const handleAddGroup = (e) => {
     e.preventDefault();
+
+    // Validation for group name input
+    groupName = groupName.trim();
+    if (groupName === '') {
+      alert('Please, inform the group name.');
+      return;
+    }
+    const existingGroup = groups.find((g) => g.name === groupName);
+    if (existingGroup) {
+      alert(`${groupName} already exists. Please, choose another group name.`);
+      document.getElementById('groupName').value = '';
+      return;
+    }
+
+    // Validation for number of people input
+    numberOfPeople = parseInt(
+      document.getElementById('numberOfPeople').value,
+      10
+    );
+    if (isNaN(numberOfPeople) || numberOfPeople < 1) {
+      alert('Please, inform a valid quantity.');
+      document.getElementById('numberOfPeople').value = '';
+      return;
+    }
+
+    // Store the group
     const group = { name: groupName, qty: numberOfPeople };
     setGroups([...groups, group]);
+
+    // Clean the form
+    groupName = '';
+    numberOfPeople = 0;
+    document.getElementById('groupName').value = '';
+    document.getElementById('numberOfPeople').value = '';
   };
 
   const handleDeleteGroup = (name) => {
