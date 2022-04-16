@@ -30,7 +30,7 @@ const Groups = () => {
       10
     );
     if (isNaN(numberOfPeople) || numberOfPeople < 1) {
-      alert('Please, inform a valid quantity.');
+      alert('Please, inform a valid number of people.');
       document.getElementById('numberOfPeople').value = '';
       return;
     }

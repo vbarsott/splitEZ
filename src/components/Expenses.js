@@ -138,7 +138,7 @@ const Expenses = () => {
                   className='d-flex justify-content-between align-items-center my-2'>
                   <div>
                     {exp.who}: {exp.what} (CA$
-                    {exp.amount})
+                    {exp.amount.toFixed(2)})
                   </div>
 
                   <RiDeleteBin6Line

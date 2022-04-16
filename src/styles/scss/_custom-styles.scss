@@ -85,7 +85,11 @@ body {
 // Brand design
 // =============================================
 // Logo design
-.rotateText {
+.rotateTextLeft {
   transform: rotate(-25deg);
+  margin-top: 20px !important;
+}
+.rotateTextRight {
+  transform: rotate(25deg);
   margin-top: 20px !important;
 }
